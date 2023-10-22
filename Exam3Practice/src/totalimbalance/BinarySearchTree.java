@@ -1,4 +1,4 @@
-package averagenodevalue;
+package totalimbalance;
 
 /**
  * @author You!
@@ -15,17 +15,15 @@ public class BinarySearchTree {
 	}
 
 	/**
-	 * Finds the average numeric value of every node in this tree.
-	 * For example, a tree with root = 10 and children = 5 and 20 would return 
-	 * (10+5+20)/3 = 11.666666. 
+	 * Finds the total imbalance of a tree.
+	 * That is, take a tree and find the sum of the positive difference of each of their subtree heights.
+	 * See printout for examples.
 	 * 
-	 * See spec for hints and efficiency requirements.
-	 * 
-	 * @return The average value of the nodes in this tree.
+	 * @return Finds the sum of every height imbalance within the tree;
 	 */
-	public double averageValue() {
+	public int totalImbalance() {
 		// TODO: Write me
-		return -17.0;
+		return -17;
 	}
 	
 	/**
