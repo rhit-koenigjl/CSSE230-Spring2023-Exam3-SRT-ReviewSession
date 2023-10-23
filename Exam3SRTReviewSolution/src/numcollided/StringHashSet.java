@@ -28,9 +28,23 @@ public class StringHashSet {
 	 * @return The number of items in the hashtable that collided
 	 */
 	public int numCollidedEntries() {
-		//TODO: Write this method
-		return -1;
+		int numCollisions = 0;
+		for (int i = 0;i < mCapacity; i ++) {
+			String curr = mArray[i];
+			if (curr != null && getIndex(curr, mCapacity) != i) {
+				numCollisions ++;
+			}
+		}
+		return numCollisions;
 	} // numCollidedEntries
+	
+	private int getIndex(String item, int capacity) {
+		int hashCode = item.hashCode();
+		if (hashCode < 0) {
+			hashCode += Integer.MAX_VALUE + 1;
+		}
+		return hashCode % capacity;
+	}
 
 	/**
 	 * Adds a new node if it is not there already. Do linear-probing to resolve

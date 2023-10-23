@@ -73,8 +73,15 @@ public class BinarySearchTree {
 		}
 
 		public ImbalanceHelper totalImbalance() {
-			// TODO Auto-generated method stub
-			return null;
+			if (this == NULL_NODE)
+				return new ImbalanceHelper(0, -1);
+			
+			ImbalanceHelper lHelper = left.totalImbalance();
+			ImbalanceHelper rHelper = right.totalImbalance();
+			
+			return new ImbalanceHelper (
+					lHelper.total + rHelper.total + Math.abs(lHelper.height - rHelper.height), 
+					Math.max(lHelper.height, rHelper.height) + 1);
 		}
 
 		public BinaryNode insert(Integer e) {
