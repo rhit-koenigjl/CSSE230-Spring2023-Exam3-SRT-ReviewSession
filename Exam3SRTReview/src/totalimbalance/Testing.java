@@ -64,7 +64,7 @@ public class Testing {
 
 	@AfterClass
 	public static void displayPoints() {
-		System.out.printf("countHeightImbalancedNodes unit tests:  %2d/15\n", countTotalImbalancePoints);
-		System.out.printf("countHeightImbalancedNodes efficiency will be checked by a grader\n");
+		System.out.printf("testTotalImbalance unit tests:  %2d/15\n", countTotalImbalancePoints);
+		System.out.printf("testTotalImbalance efficiency will be checked by a grader\n");
 	}
 }
